@@ -7,8 +7,8 @@ local assets =
 }
 
 local function OnDeploy(inst, pt, deployer)
-    local trapQuantity = inst.trapPackSize or 1
-    local trapPadding = inst.trapPackPadding or 1
+    local trapQuantity = TUNING.TRAP_PACKBOX_SIZE or 1
+    local trapPadding = TUNING.TRAP_PACKBOX_PADDING or 1
     local half = (trapQuantity+1)/2
     for i=1,trapQuantity do
         for j=1,trapQuantity do
